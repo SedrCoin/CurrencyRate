@@ -1,0 +1,25 @@
+<main class="main">
+	<div class="content">
+		<mat-icon *ngIf="additionalCurrencies.length" (click)="onAddCurrency()">add_box</mat-icon>
+		<span class="error" *ngIf="error">Ooops, some error occurred: {{error}}</span>
+	</div>
+	<div class="loading" *ngIf="loading">
+		<svg class="spinner" viewBox="0 0 50 50">
+			<circle
+					class="path"
+					cx="25"
+					cy="25"
+					r="20"
+					fill="none"
+					stroke-width="5"
+			></circle>
+		</svg>
+	</div>
+	<ng-container *ngIf="!loading">
+		<app-currency
+				*ngFor="let curr of currs"
+				[value]="curr"
+				(delete)="onDeleteCurrency($event)"
+		></app-currency>
+	</ng-container>
+</main>

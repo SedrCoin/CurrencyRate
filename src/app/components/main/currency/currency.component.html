@@ -1,0 +1,8 @@
+<div class="container">
+  <span> {{ currency.addTicker() }}{{ currency.name }} / </span>
+  <span>
+    {{ currency.curValue | currency : "RUB" : "symbol-narrow" }}
+	  (<span [ngStyle]="{'color': currency.countDifference() >= 0 ? 'green' : 'red'}"> {{currency.getIcon() + (currency.countDifference() | number)}} </span>)
+  </span>
+  <mat-icon (click)="onCloseClick()">close</mat-icon>
+</div>

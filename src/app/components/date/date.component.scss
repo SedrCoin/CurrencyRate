@@ -1,0 +1,9 @@
+$border: #0000001a;
+:host {
+  .date {
+    padding: 5px 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $border;
+    width: 100%;
+  }
+}

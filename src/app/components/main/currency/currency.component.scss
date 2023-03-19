@@ -1,0 +1,36 @@
+$bgHoverItem: #6462621a;
+$border: #0000001a;
+$bgItem: rgba(255, 255, 255, 0.8);
+$iconColor: black;
+
+:host {
+  position: relative;
+  width: 240px;
+  height: 50px;
+  border: 1px solid $border;
+  background: $bgItem;
+  display: grid;
+  place-items: center;
+  margin-top: 10px;
+  border-radius: 10px;
+  transition: background-color ease 0.3s;
+  &:hover {
+    background-color: $bgHoverItem;
+    cursor: default;
+  }
+  span {
+    font-weight: 400;
+  }
+  mat-icon {
+    padding: 3px 0;
+    position: absolute;
+    top: 0;
+    right: -5px;
+    color: $iconColor;
+    font-size: 18px;
+    cursor: pointer;
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+}
