@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { delay, map, Observable, of } from "rxjs";
+import { map } from "rxjs";
 import { Currency } from "../model/currency.model";
 
 @Injectable({
@@ -15,7 +15,7 @@ export class RequestService {
         `https://api.apilayer.com/currency_data/live?source=${cur}&currencies=RUB`,
         {
           headers: new HttpHeaders({
-            apikey: "vMvcwSIbn8zj3HugbYHhIooVEr5IIZy7",
+            apikey: "WPuBpoBdZgN7jYwR1IVDWoEfcq4VH3lR",
           }),
 
           responseType: "json",

@@ -2,7 +2,7 @@ export class Currency {
   constructor(public name: string, public curValue: number) {}
   prevValue: number;
 
-  public countDifference(): any {
+  public countDifference(): number {
     if (!this.prevValue) {
       return 0.0;
     } else {
@@ -12,12 +12,12 @@ export class Currency {
 
   public getIcon(): string {
     if (this.countDifference() > 0) {
-      return '+';
+      return "+";
     }
-    return '';
+    return "";
   }
 
-  public addTicker(): any {
+  public addTicker(): string {
     switch (this.name) {
       case "USD":
         return "$";
@@ -32,7 +32,7 @@ export class Currency {
       case "TRY":
         return "₺";
       default:
-        return 'N/A';
+        return "N/A";
     }
   }
 }
